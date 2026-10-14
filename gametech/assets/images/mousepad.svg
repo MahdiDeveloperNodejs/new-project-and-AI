@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2230"/>
+      <stop offset="1" stop-color="#0b0e15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#ff7a1a" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rgbedge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a1a"/>
+      <stop offset="1" stop-color="#ffc226"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="1">
+    <path d="M0 150H800M0 300H800M0 450H800M200 0V600M400 0V600M600 0V600" fill="none"/>
+  </g>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- بدنه ماوس‌پد -->
+  <rect x="160" y="185" width="480" height="280" rx="26" fill="#121826" stroke="#2a3348" stroke-width="2"/>
+  <!-- لبه RGB -->
+  <rect x="174" y="199" width="452" height="252" rx="18" fill="none" stroke="url(#rgbedge)" stroke-width="3" stroke-dasharray="16 10"/>
+  <!-- دوخت لبه -->
+  <rect x="188" y="213" width="424" height="224" rx="12" fill="none" stroke="#2a3348" stroke-width="2" stroke-dasharray="4 7"/>
+  <!-- لوگو مرکزی -->
+  <circle cx="400" cy="325" r="38" fill="#ff7a1a" opacity="0.14"/>
+  <text x="400" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ff7a1a" opacity="0.9">GT</text>
+  <!-- برچسب -->
+  <text x="400" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" letter-spacing="6" fill="#8b94a8">XL RGB SURFACE</text>
+</svg>

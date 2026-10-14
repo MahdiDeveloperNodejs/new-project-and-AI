@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ورود به حساب | گیم‌تک</title>
+  <meta name="description" content="ورود به حساب کاربری گیم‌تک." />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container auth-page">
+    <div class="auth-card panel">
+      <div class="auth-head">
+        <span class="auth-logo">🎮</span>
+        <h1>ورود به گیم‌تک</h1>
+        <p>برای خرید و پیگیری سفارش‌ها وارد حساب خود شوید</p>
+      </div>
+
+      <!-- ⚠️ ورود واقعی بعد از اتصال بک‌اند فعال می‌شود -->
+      <div class="demo-note">
+        این صفحه در حالت نمایشی است؛ هر ایمیل/موبایل و رمز معتبر پذیرفته می‌شود.
+        احراز هویت واقعی باید در بک‌اند انجام شود.
+      </div>
+
+      <form id="login-form" novalidate>
+        <div class="form-field">
+          <label for="login-identifier">ایمیل یا شماره موبایل</label>
+          <input type="text" id="login-identifier" name="identifier" placeholder="example@mail.com یا ۰۹۱۲…" autocomplete="username" />
+          <small class="field-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="login-password">رمز عبور</label>
+          <input type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password" />
+          <small class="field-error"></small>
+        </div>
+        <div class="auth-row">
+          <a class="link-muted" href="forgot-password.html">فراموشی رمز عبور؟</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">ورود</button>
+      </form>
+
+      <p class="auth-footer">حساب کاربری ندارید؟ <a href="register.html">ثبت‌نام کنید</a></p>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

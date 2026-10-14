@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2230"/>
+      <stop offset="1" stop-color="#0b0e15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ffc226" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffc226" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="1">
+    <path d="M0 150H800M0 300H800M0 450H800M200 0V600M400 0V600M600 0V600" fill="none"/>
+  </g>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <circle cx="400" cy="255" r="160" fill="#ffc226" opacity="0.1"/>
+  <circle cx="400" cy="255" r="225" fill="none" stroke="#ffc226" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="6 10"/>
+  <text x="400" y="330" font-size="190" text-anchor="middle">🎙️</text>
+</svg>

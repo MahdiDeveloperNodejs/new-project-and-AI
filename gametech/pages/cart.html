@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سبد خرید | گیم‌تک</title>
+  <meta name="description" content="سبد خرید شما در گیم‌تک." />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>سبد خرید</h1>
+      <p>اقلام سبد خود را بررسی و تعداد آن‌ها را تنظیم کنید.</p>
+    </div>
+
+    <!-- محتوای سبد وقتی خالی نیست -->
+    <div id="cart-content" class="cart-layout" hidden>
+      <section class="cart-items" id="cart-items" aria-label="اقلام سبد خرید"></section>
+      <aside class="cart-summary" id="cart-summary"></aside>
+    </div>
+
+    <!-- حالت سبد خالی -->
+    <div id="cart-empty" class="empty-state" hidden>
+      <span class="empty-emoji">🛒</span>
+      <h2>سبد خرید شما خالی است</h2>
+      <p>هنوز محصولی به سبد اضافه نکرده‌اید. از فروشگاه شروع کنید!</p>
+      <a class="btn btn-primary btn-lg" href="products.html">رفتن به فروشگاه</a>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+</html>

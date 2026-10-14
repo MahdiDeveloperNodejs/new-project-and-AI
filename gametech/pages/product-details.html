@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>جزئیات محصول | گیم‌تک</title>
+  <meta name="description" content="جزئیات کامل محصول، مشخصات فنی، موجودی و محصولات مرتبط در گیم‌تک." />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container page">
+    <!-- مسیر راهنما (Breadcrumb) توسط جاوااسکریپت پر می‌شود -->
+    <nav class="breadcrumb" id="breadcrumb" aria-label="مسیر صفحه"></nav>
+
+    <!-- وقتی محصول پیدا نشود -->
+    <div id="product-not-found" class="empty-state" hidden>
+      <span class="empty-emoji">🕹️</span>
+      <h2>محصول پیدا نشد</h2>
+      <p>محصولی که دنبال آن هستید وجود ندارد یا حذف شده است.</p>
+      <a class="btn btn-primary" href="products.html">بازگشت به فروشگاه</a>
+    </div>
+
+    <div id="product-page-content">
+      <div class="details-layout">
+        <!-- گالری تصاویر -->
+        <div class="gallery">
+          <div class="gallery-main">
+            <img id="main-image" src="" alt="تصویر محصول" />
+          </div>
+          <div class="gallery-thumbs" id="gallery-thumbs"></div>
+        </div>
+
+        <!-- اطلاعات محصول توسط جاوااسکریپت پر می‌شود -->
+        <div id="details-info"></div>
+      </div>
+
+      <!-- توضیحات و مشخصات فنی -->
+      <div class="details-sections">
+        <div class="details-block panel">
+          <h2>توضیحات محصول</h2>
+          <div class="details-text" id="product-description"></div>
+        </div>
+        <div class="details-block panel">
+          <h2>مشخصات فنی</h2>
+          <table class="specs-table" id="specs-table"></table>
+        </div>
+      </div>
+    </div>
+
+    <!-- محصولات مرتبط -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">محصولات مرتبط</h2>
+          <p class="section-subtitle">ممکن است این‌ها هم به کارتان بیاید</p>
+        </div>
+      </div>
+      <div id="related-products" class="products-grid"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/product-details.js"></script>
+</body>
+</html>

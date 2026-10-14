@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حساب کاربری | گیم‌تک</title>
+  <meta name="description" content="اطلاعات حساب، ویرایش پروفایل و تاریخچه سفارش‌ها در گیم‌تک." />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>حساب کاربری</h1>
+      <p>اطلاعات خود را مدیریت و سفارش‌هایتان را پیگیری کنید.</p>
+    </div>
+
+    <!-- وقتی کاربر وارد نشده باشد -->
+    <div id="account-guest" class="empty-state" hidden>
+      <span class="empty-emoji">👤</span>
+      <h2>وارد حساب خود نشده‌اید</h2>
+      <p>برای مشاهده اطلاعات و سفارش‌ها، ابتدا وارد شوید یا ثبت‌نام کنید.</p>
+      <div class="success-actions" style="margin-top:0">
+        <a class="btn btn-primary" href="login.html">ورود به حساب</a>
+        <a class="btn btn-outline" href="register.html">ثبت‌نام</a>
+      </div>
+    </div>
+
+    <!-- محتوای حساب کاربری (بعد از ورود) -->
+    <div id="account-content" class="account-layout" hidden>
+      <aside class="account-side panel">
+        <div class="account-profile">
+          <span class="avatar" id="account-avatar">گ</span>
+          <h2 id="account-name">—</h2>
+          <p id="account-contact">—</p>
+          <span class="muted">عضو باشگاه مشتریان گیم‌تک</span>
+        </div>
+        <button type="button" id="logout-btn" class="btn btn-danger-outline btn-block">
+          خروج از حساب
+        </button>
+      </aside>
+
+      <section class="account-main">
+        <!-- ویرایش پروفایل -->
+        <div class="panel">
+          <h2 class="panel-title">ویرایش پروفایل</h2>
+          <!-- TODO(بک‌اند): ذخیره تغییرات با PATCH /api/users/me -->
+          <form id="profile-form" novalidate>
+            <div class="form-field">
+              <label for="profile-name">نام و نام خانوادگی</label>
+              <input type="text" id="profile-name" name="name" autocomplete="name" />
+              <small class="field-error"></small>
+            </div>
+            <div class="form-field">
+              <label for="profile-contact">ایمیل یا شماره موبایل</label>
+              <input type="text" id="profile-contact" name="contact" autocomplete="username" />
+              <small class="field-error"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+          </form>
+        </div>
+
+        <!-- تاریخچه سفارش‌ها -->
+        <div class="panel">
+          <h2 class="panel-title">تاریخچه سفارش‌ها</h2>
+          <div id="orders-list"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

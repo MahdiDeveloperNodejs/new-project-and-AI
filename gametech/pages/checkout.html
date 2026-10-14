@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تکمیل سفارش | گیم‌تک</title>
+  <meta name="description" content="تکمیل اطلاعات ارسال و ثبت نهایی سفارش در گیم‌تک." />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container page checkout-page">
+    <div class="page-head">
+      <h1>تکمیل سفارش</h1>
+      <p>اطلاعات ارسال را وارد کنید تا سفارش شما ثبت شود.</p>
+    </div>
+
+    <!-- فرم و خلاصه سفارش -->
+    <div id="checkout-content" class="checkout-layout" hidden>
+      <form id="checkout-form" class="checkout-form panel" novalidate>
+        <h2>اطلاعات گیرنده</h2>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="checkout-name">نام و نام خانوادگی</label>
+            <input type="text" id="checkout-name" name="name" placeholder="مثلاً علی محمدی" autocomplete="name" />
+            <small class="field-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="checkout-phone">شماره موبایل</label>
+            <input type="tel" id="checkout-phone" name="phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" autocomplete="tel" inputmode="numeric" />
+            <small class="field-error"></small>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="checkout-address">آدرس کامل</label>
+          <textarea id="checkout-address" name="address" placeholder="استان، شهر، خیابان، پلاک و واحد…" autocomplete="street-address"></textarea>
+          <small class="field-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="checkout-postal">کد پستی</label>
+          <input type="text" id="checkout-postal" name="postalCode" placeholder="۱۰ رقم، بدون خط تیره" inputmode="numeric" />
+          <small class="field-error"></small>
+        </div>
+
+        <h2>روش پرداخت</h2>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="online" checked />
+            <div>
+              <strong>پرداخت آنلاین</strong>
+              <span>انتقال به درگاه پرداخت بانکی — پس از اتصال درگاه به بک‌اند فعال می‌شود</span>
+            </div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="cod" />
+            <div>
+              <strong>پرداخت در محل</strong>
+              <span>پرداخت نقدی یا با کارت‌خوان هنگام تحویل سفارش</span>
+            </div>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top: 22px">
+          ثبت نهایی سفارش
+        </button>
+      </form>
+
+      <!-- خلاصه سفارش توسط checkout.js پر می‌شود -->
+      <aside class="panel" id="order-summary"></aside>
+    </div>
+
+    <!-- وقتی سبد خرید خالی است -->
+    <div id="checkout-empty" class="empty-state" hidden>
+      <span class="empty-emoji">🧾</span>
+      <h2>سبد خرید شما خالی است</h2>
+      <p>برای تکمیل سفارش، ابتدا محصولی به سبد اضافه کنید.</p>
+      <a class="btn btn-primary" href="products.html">رفتن به فروشگاه</a>
+    </div>
+
+    <!-- بعد از ثبت موفق سفارش، توسط checkout.js ساخته می‌شود -->
+    <div id="order-success" class="success-panel" hidden></div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+</html>

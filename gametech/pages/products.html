@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فروشگاه | گیم‌تک</title>
+  <meta name="description" content="همه محصولات گیم‌تک با فیلتر دسته‌بندی، محدوده قیمت، جستجو و مرتب‌سازی." />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1>فروشگاه گیم‌تک</h1>
+      <p>تجهیزات گیمینگ و قطعات کامپیوتر را جستجو، فیلتر و مقایسه کنید.</p>
+    </div>
+
+    <div class="shop-layout">
+      <!-- ستون فیلترها -->
+      <aside class="filters" id="filters-panel">
+        <div class="filter-group">
+          <h3>جستجو</h3>
+          <div class="form-field" style="margin-bottom: 0">
+            <input type="search" id="filter-search" placeholder="نام محصول…" aria-label="جستجوی محصول" />
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>دسته‌بندی</h3>
+          <ul id="filter-categories"></ul>
+        </div>
+
+        <div class="filter-group">
+          <h3>محدوده قیمت (تومان)</h3>
+          <div class="price-inputs">
+            <input type="number" id="filter-min" placeholder="از قیمت" min="0" aria-label="حداقل قیمت" />
+            <input type="number" id="filter-max" placeholder="تا قیمت" min="0" aria-label="حداکثر قیمت" />
+            <button type="button" id="apply-price" class="btn btn-outline btn-sm">اعمال فیلتر قیمت</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-check">
+            <input type="checkbox" id="filter-discount" />
+            فقط محصولات تخفیف‌دار
+          </label>
+        </div>
+
+        <button type="button" id="clear-filters" class="btn btn-ghost btn-sm btn-block">حذف همه فیلترها</button>
+      </aside>
+
+      <!-- ستون محصولات -->
+      <section>
+        <div class="shop-toolbar">
+          <button type="button" id="toggle-filters" class="btn btn-outline btn-sm">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            فیلترها
+          </button>
+          <span class="result-count" id="result-count"></span>
+          <select id="sort-select" class="sort-select" aria-label="مرتب‌سازی محصولات">
+            <option value="newest">جدیدترین</option>
+            <option value="bestselling">پرفروش‌ترین</option>
+            <option value="cheapest">ارزان‌ترین</option>
+            <option value="expensive">گران‌ترین</option>
+            <option value="rating">بیشترین امتیاز</option>
+            <option value="discount">بیشترین تخفیف</option>
+          </select>
+        </div>
+
+        <div id="products-grid" class="products-grid"></div>
+
+        <!-- حالت خالی: وقتی هیچ محصولی با فیلترها پیدا نشود -->
+        <div id="shop-empty" class="empty-state" hidden>
+          <span class="empty-emoji">🔍</span>
+          <h2>محصولی پیدا نشد</h2>
+          <p>فیلترها را تغییر بدهید یا عبارت دیگری جستجو کنید.</p>
+          <button type="button" id="empty-reset" class="btn btn-primary">حذف فیلترها</button>
+        </div>
+
+        <div class="load-more-wrap">
+          <button type="button" id="load-more" class="btn btn-outline btn-lg">نمایش محصولات بیشتر</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
+</body>
+</html>

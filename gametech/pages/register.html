@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ثبت‌نام | گیم‌تک</title>
+  <meta name="description" content="ساخت حساب کاربری جدید در گیم‌تک." />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header id="site-header"></header>
+
+  <main class="container auth-page">
+    <div class="auth-card panel">
+      <div class="auth-head">
+        <span class="auth-logo">🎮</span>
+        <h1>ساخت حساب کاربری</h1>
+        <p>در چند ثانیه عضو باشگاه گیم‌تک شوید</p>
+      </div>
+
+      <!-- ⚠️ ثبت‌نام واقعی بعد از اتصال بک‌اند فعال می‌شود -->
+      <div class="demo-note">
+        این صفحه در حالت نمایشی است و هیچ رمز عبوری ذخیره نمی‌شود.
+        ثبت‌نام واقعی باید در بک‌اند انجام شود.
+      </div>
+
+      <form id="register-form" novalidate>
+        <div class="form-field">
+          <label for="register-name">نام و نام خانوادگی</label>
+          <input type="text" id="register-name" name="name" placeholder="مثلاً سارا رضایی" autocomplete="name" />
+          <small class="field-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="register-identifier">ایمیل یا شماره موبایل</label>
+          <input type="text" id="register-identifier" name="identifier" placeholder="example@mail.com یا ۰۹۱۲…" autocomplete="username" />
+          <small class="field-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="register-password">رمز عبور</label>
+          <input type="password" id="register-password" name="password" placeholder="حداقل ۶ کاراکتر" autocomplete="new-password" />
+          <small class="field-error"></small>
+        </div>
+        <div class="form-field">
+          <label for="register-confirm">تکرار رمز عبور</label>
+          <input type="password" id="register-confirm" name="confirmPassword" placeholder="مجدداً رمز عبور را وارد کنید" autocomplete="new-password" />
+          <small class="field-error"></small>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">ثبت‌نام</button>
+      </form>
+
+      <p class="auth-footer">قبلاً ثبت‌نام کرده‌اید؟ <a href="login.html">وارد شوید</a></p>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

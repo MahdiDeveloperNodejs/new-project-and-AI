@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2230"/>
+      <stop offset="1" stop-color="#0b0e15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#ff7a1a" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="1">
+    <path d="M0 150H800M0 300H800M0 450H800M200 0V600M400 0V600M600 0V600" fill="none"/>
+  </g>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <!-- برد رم -->
+  <rect x="330" y="105" width="140" height="335" rx="12" fill="#161c2a" stroke="#2a3348" stroke-width="2"/>
+  <!-- هیت‌اسپردر نارنجی -->
+  <rect x="342" y="117" width="116" height="150" rx="8" fill="#ff7a1a" opacity="0.22"/>
+  <rect x="342" y="117" width="116" height="150" rx="8" fill="none" stroke="#ff7a1a" stroke-opacity="0.55" stroke-width="2"/>
+  <!-- خطوط هیت‌اسپردر -->
+  <g stroke="#ff7a1a" stroke-opacity="0.4" stroke-width="3">
+    <line x1="358" y1="135" x2="442" y2="135"/>
+    <line x1="358" y1="165" x2="442" y2="165"/>
+    <line x1="358" y1="195" x2="442" y2="195"/>
+    <line x1="358" y1="225" x2="442" y2="225"/>
+  </g>
+  <!-- چیپ‌ها -->
+  <g fill="#212b40" stroke="#2a3348" stroke-width="2">
+    <rect x="352" y="286" width="42" height="30" rx="5"/>
+    <rect x="404" y="286" width="42" height="30" rx="5"/>
+    <rect x="352" y="326" width="42" height="30" rx="5"/>
+    <rect x="404" y="326" width="42" height="30" rx="5"/>
+    <rect x="352" y="366" width="42" height="30" rx="5"/>
+    <rect x="404" y="366" width="42" height="30" rx="5"/>
+  </g>
+  <!-- پین‌های طلایی -->
+  <rect x="334" y="440" width="132" height="24" fill="#0b0e15"/>
+  <g fill="#d8b13a">
+    <rect x="338" y="440" width="6" height="24"/>
+    <rect x="349" y="440" width="6" height="24"/>
+    <rect x="360" y="440" width="6" height="24"/>
+    <rect x="371" y="440" width="6" height="24"/>
+    <rect x="382" y="440" width="6" height="24"/>
+    <rect x="393" y="440" width="6" height="24"/>
+    <rect x="404" y="440" width="6" height="24"/>
+    <rect x="415" y="440" width="6" height="24"/>
+    <rect x="426" y="440" width="6" height="24"/>
+    <rect x="437" y="440" width="6" height="24"/>
+    <rect x="448" y="440" width="6" height="24"/>
+    <rect x="459" y="440" width="6" height="24"/>
+  </g>
+  <!-- برچسب -->
+  <text x="400" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#ff7a1a" opacity="0.9">FLASH DDR5</text>
+  <text x="400" y="562" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" letter-spacing="6" fill="#8b94a8">GAMING MEMORY</text>
+</svg>
