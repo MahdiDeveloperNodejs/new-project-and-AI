@@ -6,7 +6,7 @@ const {
 } = require("./models/auth/auth.routes");
 const mainRouter = Router()
 
-mainRouter.use(AuthRouter)
+mainRouter.use("/auth",AuthRouter)
 
 
 
